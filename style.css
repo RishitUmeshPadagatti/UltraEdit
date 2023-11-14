@@ -1,0 +1,231 @@
+:root {
+    --blueBackground: #00b6d1;
+    --greenBackground: #5db85b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 100px;
+    padding: 10px 5px;
+}
+
+.firstPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstPart img {
+    width: 180px;
+    height: 58px;
+    cursor: pointer;
+}
+
+.secondPart {
+    display: flex;
+}
+
+.secondPart ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 45px;
+}
+
+.secondPart ul li {
+    justify-content: space-around;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.secondPart ul li img {
+    width: 25px;
+    height: 25px;
+}
+
+@media only screen and (max-width: 830px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondPart {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        display: block;
+    }
+
+    .secondPart ul {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 25px;
+    }
+
+    .secondPart ul li {
+        width: 100vw;
+        display: flex;
+    }
+
+    #exceptionForResponsiveDesign {
+        margin-top: 20px;
+    }
+
+}
+
+/* FIRST MAIN PART */
+.secondMainPartOfMain {
+    margin: 50px 0px;
+}
+
+.lineOne {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 45px;
+    margin: 40px;
+    text-align: center;
+}
+
+.lineOne div{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.lineOne img {
+    margin-left: 10px;
+}
+
+.lineTwo {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    font-size: 24px;
+    line-height: 1.3em;
+    color: #222222;
+    text-align: center;
+    font-weight: 300;
+}
+
+.lineThree {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    font-size: 14px;
+}
+
+.lineThree button {
+    background-color: var(--blueBackground);
+    border: 0px;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.lineThree button a {
+    color: white;
+    font-weight: 600;
+}
+
+/* DOWNLOAD LINKS */
+.thirdPartOfMain{
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    margin: 10px;
+    width: max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+}
+
+.lang1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lang2 {
+    font-size: 12px;
+}
+
+.lang1,
+.lang2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.bit32 button,
+.bit64 button {
+    padding: 8px 15px;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+.bit32 button a,
+.bit64 button a {
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+}
+
+.bit32 button {
+    background-color: var(--blueBackground);
+}
+
+.bit64 button {
+    background-color: var(--greenBackground);
+}
+@media only screen and (max-width: 1200px){
+    .downloads{
+        flex-direction: column;
+    }
+    .card{
+        width: 25vw;
+    }
+}
+@media only screen and (max-width: 900px){
+    .grid{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .card{
+        margin: 20px auto;
+        width: 80%;
+    }
+}
